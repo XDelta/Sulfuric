@@ -1,0 +1,5 @@
+<Solution>
+	<Project Path="Sulfuric.Preloader/Sulfuric.Preloader.csproj" Id="69a3e7dc-71d0-4443-8382-1195f1c20467" />
+	<Project Path="Sulfuric/Sulfuric.csproj" />
+	<Project Path="TestMod/TestMod.csproj" Id="f95749fa-8920-4991-9cc2-b8ebc5d397b6" />
+</Solution>

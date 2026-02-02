@@ -1,0 +1,12 @@
+<Project>
+	<PropertyGroup>
+		<TargetFramework>net472</TargetFramework>
+		<LangVersion>14.0</LangVersion>
+		<AnalysisLevel>10.0-Recommended</AnalysisLevel>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(SulfurPath)'==''">
+		<!-- If you don't want to provide a SulfurPath in dotnet build, you can specify one here -->
+		<SulfurPath Condition="Exists('R:\Program Files\Steam\steamapps\common\SULFUR')">R:\Program Files\Steam\steamapps\common\SULFUR</SulfurPath>
+	</PropertyGroup>
+</Project>

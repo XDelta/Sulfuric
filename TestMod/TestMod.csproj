@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net472</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Sulfuric\Sulfuric.csproj">
+			<Private>False</Private>
+		</ProjectReference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="PerfectRandom.Sulfur.Core">
+			<HintPath>$(SulfurPath)\Sulfur_Data\Managed\PerfectRandom.Sulfur.Core.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="UnityEngine.CoreModule">
+			<HintPath>$(SulfurPath)\Sulfur_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="UnityEngine.UI">
+			<HintPath>$(SulfurPath)\Sulfur_Data\Managed\UnityEngine.UI.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+	</ItemGroup>
+
+	<Target Name="CopyToGameDir" AfterTargets="Build">
+		<Copy SourceFiles="$(TargetPath)" DestinationFolder="$(SulfurPath)/Mods" SkipUnchangedFiles="true" />
+	</Target>
+</Project>
